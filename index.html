@@ -1,8 +1,70 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+    <link rel="stylesheet" href="tabs_css.css">
+        
+</head>
+
 <body>
     <h1>Hello World</h1>
     <p>I'm hosted with GitHub Pages.</p>
     <p style="font-family:'Aptos'">I'm going to use this webpage to begin hosting my clinical reasoning project and also to try learn how to develop GitHub pages. </p>
+    <p>Features: presentation searcher with surgical sieve, accessing illness scripts, Bayesian diagnostic generator</p>
+
+    Chest Pain
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'Vascular')">Vascular</button>
+        <button class="tablinks" onclick="openCity(event, 'Infective')">Infective</button>
+        <button class="tablinks" onclick="openCity(event, 'Traumatic')">Traumatic</button>
+        <button class="tablinks" onclick="openCity(event, 'Autoimmune')">Autoimmune</button>
+        <button class="tablinks" onclick="openCity(event, 'Metabolic')">Metabolic</button>
+        <button class="tablinks" onclick="openCity(event, 'Idiopathic')">Idiopathic</button>
+        <button class="tablinks" onclick="openCity(event, 'Neoplastic')">Neoplastic</button>
+        <button class="tablinks" onclick="openCity(event, 'Congenital')">Congenital</button>
+        <button class="tablinks" onclick="openCity(event, 'Degenerative')">Degenerative</button>
+        <button class="tablinks" onclick="openCity(event, 'Endocrine')">Endocrine</button>
+        <button class="tablinks" onclick="openCity(event, 'Functional')">Functional</button>
+      </div>
+      
+      <div id="Vascular" class="tabcontent">
+        <h3>Vascular Aetiologies</h3>
+        <p>ACS</p>
+      </div>
+      
+      <div id="Paris" class="tabcontent">
+        <h3>Paris</h3>
+        <p>Paris is the capital of France.</p>
+      </div>
+      
+      <div id="Tokyo" class="tabcontent">
+        <h3>Tokyo</h3>
+        <p>Tokyo is the capital of Japan.</p>
+      </div>
+
+
+
+<script>
+function openCity(evt, cityName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+  
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+  
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+  
+    // Show the current tab, and add an "active" class to the link that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+</script>
 </body>
 </html>
